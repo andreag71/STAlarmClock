@@ -26,9 +26,18 @@
 
         <receiver android:name=".AlarmReceiver" />
 
+        <receiver android:name=".AlarmBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+        <service android:name=".AlarmWakeupService" />
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"></activity>
+
     </application>
 
 </manifest>
