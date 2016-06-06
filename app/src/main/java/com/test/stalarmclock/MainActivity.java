@@ -85,6 +85,8 @@ public class MainActivity extends ActionBarActivity {
 
         } else {
             setAlarmText("Alarm Off");
+            alarmHour = -1;
+            alarmMinute = -1;
             alarm.cancelAlarm(this);
             if ( alarmOn ) {
                 PowerOffAsyncTask task = new PowerOffAsyncTask();
